@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EntityLayer.Entities
+{
+    public class publisher
+    {
+        [Key]
+        public int publisherID { get; set; }
+        [StringLength(30)]
+        public string publisherName { get; set; }
+        ICollection<book> books { get; set; }
+
+    }
+}
